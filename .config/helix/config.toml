@@ -1,0 +1,18 @@
+theme = "catppuccin_mocha"
+
+[editor]
+line-number = "relative"
+scroll-lines = 1
+auto-pairs = false
+
+[editor.cursor-shape]
+insert = "underline"
+normal = "block"
+select = "block"
+
+[editor.file-picker]
+hidden = true
+
+[editor.lsp]
+display-messages = true
+
