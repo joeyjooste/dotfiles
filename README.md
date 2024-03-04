@@ -53,7 +53,7 @@ $ stow .
 
 Fork the Repo by clicking the fork button on github
 
-Now follow the [## Installation] but change the git URL to that of your own repo
+Now follow the [Installation](##Installation) but change the git URL to that of your own repo
 
 ### Add your own dotfiles
 
