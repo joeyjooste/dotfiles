@@ -81,3 +81,13 @@ NOTE: This command overwrites the existing dotfiles on your system, use with cau
 ## How to setup your own dotfiles repo
 
 [Setup GNU Stow and your very own dotfiles Repo](https://youtu.be/y6XCebnB9gs?si=k3jpqGTt3HtZgFtv)
+
+
+# Trasition to Void
+I'm moving my dotfiles across to a suckless and linux void setup, below is documentation that I'm finding along the way.
+
+### Sym linking flatpaks
+This allows them to be opened by dmenu
+```
+sudo ln -s /var/lib/flatpak/exports/bin/chat.rocket.RocketChat /usr/bin/rocket-chat
+```
