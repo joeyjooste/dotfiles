@@ -83,11 +83,16 @@ NOTE: This command overwrites the existing dotfiles on your system, use with cau
 [Setup GNU Stow and your very own dotfiles Repo](https://youtu.be/y6XCebnB9gs?si=k3jpqGTt3HtZgFtv)
 
 
-# Trasition to Void
+# Trassition to Void
 I'm moving my dotfiles across to a suckless and linux void setup, below is documentation that I'm finding along the way.
 
 ### Sym linking flatpaks
 This allows them to be opened by dmenu
 ```
 sudo ln -s /var/lib/flatpak/exports/bin/chat.rocket.RocketChat /usr/bin/rocket-chat
+```
+
+### Dependancys for picom (FT labs fork)
+```
+sudo xbps-install -S meson ninja cmake libev-devel xcb-util-renderutil-devel xcb-util-image-devel pixman-devel pkgconf-devel uthash pcre-devel dbus-devel glu-devel libconfig-devel
 ```
