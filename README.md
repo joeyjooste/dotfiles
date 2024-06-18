@@ -109,5 +109,46 @@ sudo xbps-install -Su
 ```
 sudo xbps-install -S helix xorg xinit git make base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel firefox
 ```
-
-
+- Make directories for suckless
+```
+mkdir .config
+```
+```
+cd .config
+```
+```
+mkdir suckless
+```
+```
+cd suckless
+```
+- Clone my/your DWM repo
+```
+git clone https://github.com/joeyjooste/dwm
+```
+- The same for ST, dmenu, and slstatus
+```
+git clone https://github.com/joeyjooste/dmenu
+```
+```
+git clone https://github.com/joeyjooste/slstatus
+```
+- ST carries a dependancy of harfbuzz-devel
+```
+sudo xbps-install -S harfbuzz-devel
+```
+```
+git clone https://github.com/joeyjooste/st
+```
+- Now compile them all
+```
+cd dwm 
+```
+```
+sudo make clean install
+```
+- Repeat for all other suckless software
+- Now start dwm
+```
+startx /usr/local/bin/dwm
+```
