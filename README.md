@@ -83,14 +83,9 @@ NOTE: This command overwrites the existing dotfiles on your system, use with cau
 [Setup GNU Stow and your very own dotfiles Repo](https://youtu.be/y6XCebnB9gs?si=k3jpqGTt3HtZgFtv)
 
 
-# Trassition to Void
+# Transition to Void
 I'm moving my dotfiles across to a suckless and linux void setup, below is documentation that I'm finding along the way.
 
-### Sym linking flatpaks
-This allows them to be opened by dmenu
-```
-sudo ln -s /var/lib/flatpak/exports/bin/chat.rocket.RocketChat /usr/bin/rocket-chat
-```
 
 ### Dependancys for picom (FT labs fork)
 ```
@@ -183,3 +178,13 @@ hx .xinitrc
 ```
 exec /usr/local/bin/dwm
 ```
+- Install flatpak to manage proprietary applications
+https://flatpak.org/setup/Void%20Linux
+For every installed flatpak application, run this command to allow dmenu to open it through a symlink
+```
+sudo ln -s /var/lib/flatpak/exports/bin/chat.rocket.RocketChat /usr/bin/rocket-chat
+```
+
+- Theme firefox with your desired theme, I use the theme below
+https://github.com/vinceliuice/WhiteSur-firefox-theme.git
+
