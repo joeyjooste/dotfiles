@@ -96,3 +96,18 @@ sudo ln -s /var/lib/flatpak/exports/bin/chat.rocket.RocketChat /usr/bin/rocket-c
 ```
 sudo xbps-install -S meson ninja cmake libev-devel xcb-util-renderutil-devel xcb-util-image-devel pixman-devel pkgconf-devel uthash pcre-devel dbus-devel glu-devel libconfig-devel
 ```
+
+### Install from scratch
+Install using void-installer
+Confirm network is working (WPA supplicant for wifi and dhcpcd for ethernet)
+
+- Update your system to mirror 
+```
+sudo xbps-install -Su
+```
+- Install basic packages
+```
+sudo xbps-install -S helix xorg xinit git make base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel firefox
+```
+
+
