@@ -182,3 +182,5 @@ sudo xbps-install -S pulseaudio
 ```
 sudo xbps-install -S pasystray
 ```
+- Disable Mouse Acceleration
+https://wiki.archlinux.org/title/Mouse_acceleration
