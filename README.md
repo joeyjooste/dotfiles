@@ -213,4 +213,6 @@ I needed the ffmpeg-devel package to enable mp4 in firefox videos.
 ```
 sudo xbps-install -S pulseaudio
 ```
-
+```
+sudo xbps-install -S pasystray
+```
