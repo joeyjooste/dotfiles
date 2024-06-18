@@ -182,5 +182,8 @@ sudo xbps-install -S pulseaudio
 ```
 sudo xbps-install -S pasystray
 ```
+### Tweaks
 - Disable Mouse Acceleration
 https://wiki.archlinux.org/title/Mouse_acceleration
+- Enable Rich Presence in flatpak version of discord
+https://github.com/flathub/com.discordapp.Discord/wiki/Rich-Precense-(discord-rpc)
