@@ -180,6 +180,9 @@ exec /usr/local/bin/dwm
 ```
 - Install flatpak to manage proprietary applications
 https://flatpak.org/setup/Void%20Linux
+
+Note: Run the last command that ads the origin, which sudo otherwise it gives a system bus error
+
 For every installed flatpak application, run this command to allow dmenu to open it through a symlink
 ```
 sudo ln -s /var/lib/flatpak/exports/bin/chat.rocket.RocketChat /usr/bin/rocket-chat
