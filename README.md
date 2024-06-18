@@ -206,5 +206,11 @@ git clone https://github.com/joeyjooste/dotfiles
 stow .
 ```
 If you have any existing config files that are conflicting, just go through and remove them and run "stow ." again.
+- Firefox MP4
+I needed the ffmpeg-devel package to enable mp4 in firefox videos.
 
+- Install pulseaudio
+```
+sudo xbps-install -S pulseaudio
+```
 
