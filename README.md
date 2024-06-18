@@ -152,3 +152,25 @@ sudo make clean install
 ```
 startx /usr/local/bin/dwm
 ```
+Press mod+shift+enter to open a terminal (mod is alt by default, it is windows key in my config)
+- Launch firefox with the following command
+```
+firefox
+```
+Head to [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
+Download a nerdfont of your choice (I use jetbrainsmono)
+
+- Inside of your downloads folder run the following
+```
+sudo mv JetBrainsMono.zip /usr/share/fonts/TTF
+```
+Use tab to complete the name of your zip.
+
+- Then cd into the TTF folder
+```
+cd /usr/share/fonts/TTF
+```
+```
+sudo unzip JetBrainsMono.zip
+```
+Now reload DWM to see it apply, (make sure the font is correctly enabled inside of your dwm config) I have reload bound to Mod+crtl+shift+q if you are using my dwm config.
