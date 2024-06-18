@@ -96,3 +96,81 @@ sudo ln -s /var/lib/flatpak/exports/bin/chat.rocket.RocketChat /usr/bin/rocket-c
 ```
 sudo xbps-install -S meson ninja cmake libev-devel xcb-util-renderutil-devel xcb-util-image-devel pixman-devel pkgconf-devel uthash pcre-devel dbus-devel glu-devel libconfig-devel
 ```
+
+### Install from scratch
+Install using void-installer
+Confirm network is working (WPA supplicant for wifi and dhcpcd for ethernet)
+
+- Update your system to mirror 
+```
+sudo xbps-install -Su
+```
+- Install basic packages
+```
+sudo xbps-install -S helix xorg xinit git make base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel firefox
+```
+- Make directories for suckless
+```
+mkdir .config
+```
+```
+cd .config
+```
+```
+mkdir suckless
+```
+```
+cd suckless
+```
+- Clone my/your DWM repo
+```
+git clone https://github.com/joeyjooste/dwm
+```
+- The same for ST, dmenu, and slstatus
+```
+git clone https://github.com/joeyjooste/dmenu
+```
+```
+git clone https://github.com/joeyjooste/slstatus
+```
+- ST carries a dependancy of harfbuzz-devel
+```
+sudo xbps-install -S harfbuzz-devel
+```
+```
+git clone https://github.com/joeyjooste/st
+```
+- Now compile them all
+```
+cd dwm 
+```
+```
+sudo make clean install
+```
+- Repeat for all other suckless software
+- Now start dwm
+```
+startx /usr/local/bin/dwm
+```
+Press mod+shift+enter to open a terminal (mod is alt by default, it is windows key in my config)
+- Launch firefox with the following command
+```
+firefox
+```
+Head to [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
+Download a nerdfont of your choice (I use jetbrainsmono)
+
+- Inside of your downloads folder run the following
+```
+sudo mv JetBrainsMono.zip /usr/share/fonts/TTF
+```
+Use tab to complete the name of your zip.
+
+- Then cd into the TTF folder
+```
+cd /usr/share/fonts/TTF
+```
+```
+sudo unzip JetBrainsMono.zip
+```
+Now reload DWM to see it apply, (make sure the font is correctly enabled inside of your dwm config) I have reload bound to Mod+crtl+shift+q if you are using my dwm config.
