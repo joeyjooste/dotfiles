@@ -107,7 +107,7 @@ sudo xbps-install -Su
 ```
 - Install basic packages
 ```
-sudo xbps-install -S helix xorg xinit git make base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel firefox
+sudo xbps-install -S helix xorg xinit git make base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel firefox neofetch
 ```
 - Make directories for suckless
 ```
@@ -174,3 +174,12 @@ cd /usr/share/fonts/TTF
 sudo unzip JetBrainsMono.zip
 ```
 Now reload DWM to see it apply, (make sure the font is correctly enabled inside of your dwm config) I have reload bound to Mod+crtl+shift+q if you are using my dwm config.
+
+- Create xinitrc file
+```
+hx .xinitrc
+```
+- Now inside of that file add this line
+```
+exec /usr/local/bin/dwm
+```
