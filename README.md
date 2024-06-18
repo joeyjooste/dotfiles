@@ -49,7 +49,7 @@ NOTE: This command overwrites the existing dotfiles on your system, use with cau
 [Setup GNU Stow and your very own dotfiles Repo](https://youtu.be/y6XCebnB9gs?si=k3jpqGTt3HtZgFtv)
 
 
-# Transition to Void
+# Noob install guide (for me)
 I'm moving my dotfiles across to a suckless and linux void setup, below is documentation that I'm finding along the way.
 
 
