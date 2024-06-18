@@ -5,12 +5,12 @@ This is a repo containing all of my dotfiles (Files in linux that start with a .
 These files are usually configuration files for my applications and system.
 
 ## The Stack
-Distro: Void
-WM: [DWM](https://github.com/joeyjooste/dwm)
-Term: [ST](https://github.com/joeyjooste/st)
-Launcher: [DMENU](https://github.com/joeyjooste/dmenu)
-Bar: [slstatus](https://github.com/joeyjooste/slstatus)
-Apps: Flatpak
+- Distro: Void
+- WM: [DWM](https://github.com/joeyjooste/dwm)
+- Term: [ST](https://github.com/joeyjooste/st)
+- Launcher: [DMENU](https://github.com/joeyjooste/dmenu)
+- Bar: [slstatus](https://github.com/joeyjooste/slstatus)
+- Apps: Flatpak
 
 
 ## Adding your own Dot files to the repo
