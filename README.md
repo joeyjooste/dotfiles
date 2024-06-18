@@ -174,9 +174,10 @@ Now reload DWM to see it apply, (make sure the font is correctly enabled inside 
 ```
 hx .xinitrc
 ```
-- Now inside of that file add this line
+- Now inside of that file add these lines
 ```
-exec /usr/local/bin/dwm
+slstatus &
+exec dbus-run-session dwm
 ```
 - Install flatpak to manage proprietary applications
 https://flatpak.org/setup/Void%20Linux
