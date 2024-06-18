@@ -102,7 +102,7 @@ sudo xbps-install -Su
 ```
 - Install basic packages
 ```
-sudo xbps-install -S helix xorg xinit git make base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel firefox neofetch
+sudo xbps-install -S helix xorg xinit git make base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel firefox neofetch zellij stow zsh starship
 ```
 - Make directories for suckless
 ```
@@ -190,4 +190,20 @@ sudo ln -s /var/lib/flatpak/exports/bin/chat.rocket.RocketChat /usr/bin/rocket-c
 
 - Theme firefox with your desired theme, I use the theme below
 https://github.com/vinceliuice/WhiteSur-firefox-theme.git
+
+- Change default terminal to zsh
+```
+chsh -s /usr/bin/zsh
+```
+restart your system to enable the new shell
+
+- Now clone this dotfiles repo
+```
+git clone https://github.com/joeyjooste/dotfiles
+```
+```
+stow .
+```
+If you have any existing config files that are conflicting, just go through and remove them and run "stow ." again.
+
 
