@@ -4,48 +4,14 @@ This is a repo containing all of my dotfiles (Files in linux that start with a .
 
 These files are usually configuration files for my applications and system.
 
-## Requirements
+## The Stack
+Distro: Void
+WM: [DWM](https://github.com/joeyjooste/dwm)
+Term: [ST](https://github.com/joeyjooste/st)
+Launcher: [DMENU](https://github.com/joeyjooste/dmenu)
+Bar: [slstatus](https://github.com/joeyjooste/slstatus)
+Apps: Flatpak
 
-Ensure you have the following installed on your system
-
-### Git
-
-```
-pacman -S git
-```
-
-### Stow
-
-```
-pacman -S stow
-```
-
-### Zellij
-
-``` 
-pacman -S zellij
-```
-
-### Zsh
-
-```
-pacman -S zsh
-```
-
-## Installation
-
-Step 1 is to add the dotfiles repo to your $HOME directory 
-
-```
-$ git clone git@github.com/FrikkyWasTaken/dotfiles.git
-$ cd dotfiles
-```
-
-Then use GNU Stow to create symlinks
-
-```
-$ stow .
-```
 
 ## Adding your own Dot files to the repo
 
