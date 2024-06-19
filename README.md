@@ -203,4 +203,8 @@ https://wiki.archlinux.org/title/Mouse_acceleration
 https://github.com/flathub/com.discordapp.Discord/wiki/Rich-Precense-(discord-rpc)
 - Setup github SSH key and config flags
   Generate Key, Set key in SSH file, copy pub key to github, Create SSH config file that points to key, change any git url's to use SSH
-  
+
+### Todo
+Setup wallpaper
+Auto Startx
+Fix colours on bar
