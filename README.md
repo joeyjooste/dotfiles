@@ -208,3 +208,4 @@ https://github.com/flathub/com.discordapp.Discord/wiki/Rich-Precense-(discord-rp
 ### Todo
 Auto Startx
 Fix colours on bar
+Add screenshot tool + keybinds
