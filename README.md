@@ -182,6 +182,10 @@ sudo xbps-install -S pulseaudio
 ```
 sudo xbps-install -S pasystray
 ```
+- Install npm and node
+```
+sudo xbps-install -S nodejs
+```
 ### Tweaks
 - Disable Mouse Acceleration
 https://wiki.archlinux.org/title/Mouse_acceleration
@@ -189,3 +193,4 @@ https://wiki.archlinux.org/title/Mouse_acceleration
 https://github.com/flathub/com.discordapp.Discord/wiki/Rich-Precense-(discord-rpc)
 - Setup github SSH key and config flags
   Generate Key, Set key in SSH file, copy pub key to github, Create SSH config file that points to key, change any git url's to use SSH
+  
