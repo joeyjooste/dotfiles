@@ -187,3 +187,4 @@ sudo xbps-install -S pasystray
 https://wiki.archlinux.org/title/Mouse_acceleration
 - Enable Rich Presence in flatpak version of discord
 https://github.com/flathub/com.discordapp.Discord/wiki/Rich-Precense-(discord-rpc)
+- Setup github SSH key and config flags
