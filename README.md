@@ -196,6 +196,39 @@ cargo install --git https://github.com/estin/simple-completion-language-server.g
 npm i -g typescript-language-server typescript @tailwindcss/language-server prettier vscode-langservers-extracted
 ```
 
+- Install default system font
+Download Inter from here:
+https://fonts.google.com/specimen/Inter
+
+ Inside of your downloads folder run the following
+```
+sudo mv Inter.zip /usr/share/fonts/TTF
+```
+Use tab to complete the name of your zip.
+
+- Then cd into the TTF folder
+```
+cd /usr/share/fonts/TTF
+```
+```
+sudo unzip Inter.zip
+```
+```
+sudo hx /etc/fonts/local.conf
+```
+Then add this inside of it:
+```
+<?xml version='1.0'?>
+<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+<fontconfig>
+  <alias>
+    <family>sans-serif</family>
+    <prefer>
+      <family>Inter</family>
+    </prefer>
+  </alias>
+</fontconfig>
+```
 
 ### Tweaks
 - Disable Mouse Acceleration
