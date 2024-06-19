@@ -68,7 +68,7 @@ sudo xbps-install -Su
 ```
 - Install basic packages
 ```
-sudo xbps-install -S helix xorg xinit git make base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel firefox neofetch zellij stow zsh starship yazi
+sudo xbps-install -S helix xorg xinit git make base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel firefox neofetch zellij stow zsh starship yazi xwallpaper
 ```
 - Make directories for suckless
 ```
@@ -143,6 +143,7 @@ hx .xinitrc
 - Now inside of that file add these lines
 ```
 slstatus &
+xwallpaper --zoom ~/Wallpaper/gruvboxLady.png &
 exec dbus-run-session dwm
 ```
 - Install flatpak to manage proprietary applications
@@ -205,6 +206,5 @@ https://github.com/flathub/com.discordapp.Discord/wiki/Rich-Precense-(discord-rp
   Generate Key, Set key in SSH file, copy pub key to github, Create SSH config file that points to key, change any git url's to use SSH
 
 ### Todo
-Setup wallpaper
 Auto Startx
 Fix colours on bar
