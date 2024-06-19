@@ -186,6 +186,16 @@ sudo xbps-install -S pasystray
 ```
 sudo xbps-install -S nodejs
 ```
+- Helix Language Servers
+These are for my config, adjust as needed based on your config.
+```
+cargo install --git https://github.com/estin/simple-completion-language-server.git
+```
+```
+npm i -g typescript-language-server typescript @tailwindcss/language-server prettier vscode-langservers-extracted
+```
+
+
 ### Tweaks
 - Disable Mouse Acceleration
 https://wiki.archlinux.org/title/Mouse_acceleration
