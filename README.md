@@ -156,6 +156,14 @@ For every installed flatpak application, run this command to allow dmenu to open
 ```
 sudo ln -s /var/lib/flatpak/exports/bin/chat.rocket.RocketChat /usr/bin/rocket-chat
 ```
+#### List of all my flatpaks
+- Signal
+- Discord
+- Popsicle
+- Cider
+- Bitwarden
+- Obsidian
+
 
 - Theme firefox with your desired theme, I use the theme below
 https://github.com/vinceliuice/WhiteSur-firefox-theme.git
