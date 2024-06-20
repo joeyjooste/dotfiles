@@ -60,3 +60,5 @@ alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also t
 alias vc='code --disable-gpu' # gui code editor
 
 eval "$(starship init zsh)"
+
+neofetch

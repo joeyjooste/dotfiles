@@ -7,21 +7,21 @@
 
  [[language]]
  name = "typescript"
- language-servers = [  "typescript-language-server", "eslint", "emmet-ls", "scls",]
+ language-servers = [  "typescript-language-server", "eslint", "scls",]
  formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
  indent = { tab-width = 2, unit = "\t" }
  auto-format = true
 
  [[language]]
  name = "tsx"
- language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls", "scls",]
+ language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "scls",]
  formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
  indent = { tab-width = 2, unit = "\t" }
  auto-format = true
 
  [[language]]
  name = "jsx"
- language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls","scls",]
+ language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "scls",]
  grammar = "javascript"
  formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
  indent = { tab-width = 2, unit = "\t" }
@@ -29,7 +29,7 @@
 
  [[language]]
  name = "javascript"
- language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls", "scls",]
+ language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "scls",]
  formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
  indent = { tab-width = 2, unit = "\t" }
  auto-format = true
@@ -61,16 +61,13 @@
  [[language]]
  name = "html"
  formatter = { command = 'npx', args = ["prettier", "--parser", "html"] }
- language-servers = [ "vscode-html-language-server", "tailwindcss-react", "emmet-ls"]
+ language-servers = [ "vscode-html-language-server", "tailwindcss-react"]
  
  [[language]]
  name = "css"
  formatter = { command = 'npx', args = ["prettier", "--parser", "css"] }
- language-servers = [ "vscode-css-language-server", "tailwindcss-react", "emmet-ls"]
+ language-servers = [ "vscode-css-language-server", "tailwindcss-react"]
 
- [language-server.emmet-ls]
- args = ["--stdio"]
- command = "emmet-language-server"
 
  [language-server.eslint]
  args = ["--stdio"]
