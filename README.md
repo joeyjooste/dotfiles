@@ -143,6 +143,7 @@ hx .xinitrc
 - Now inside of that file add these lines
 ```
 slstatus &
+pasystray &
 xwallpaper --zoom ~/Wallpaper/gruvboxLady.png &
 exec dbus-run-session dwm
 ```
