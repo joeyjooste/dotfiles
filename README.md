@@ -113,11 +113,8 @@ sudo make clean install
 ```
 startx /usr/local/bin/dwm
 ```
-Press mod+shift+enter to open a terminal (mod is alt by default, it is windows key in my config)
-- Launch firefox with the following command
-```
-firefox
-```
+Launch firefox with mod+p 
+
 Head to [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
 Download a nerdfont of your choice (I use jetbrainsmono)
 
