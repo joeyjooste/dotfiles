@@ -159,7 +159,6 @@ sudo ln -s /var/lib/flatpak/exports/bin/chat.rocket.RocketChat /usr/bin/rocket-c
 #### List of all my flatpaks
 - Signal
 - Discord
-- Popsicle
 - Cider
 - Bitwarden
 - Obsidian
@@ -238,6 +237,11 @@ Then add this inside of it:
   </alias>
 </fontconfig>
 ```
+- Creat bootable media for another PC on void.
+```
+sudo xbps-install -S void-release-keys minisign outils
+```
+Then follow the steps here: https://docs.voidlinux.org/installation/index.html#verifying-images
 
 ### Tweaks
 - Disable Mouse Acceleration
