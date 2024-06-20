@@ -4,48 +4,14 @@ This is a repo containing all of my dotfiles (Files in linux that start with a .
 
 These files are usually configuration files for my applications and system.
 
-## Requirements
+## The Stack
+- Distro: Void
+- WM: [DWM](https://github.com/joeyjooste/dwm)
+- Term: [ST](https://github.com/joeyjooste/st)
+- Launcher: [DMENU](https://github.com/joeyjooste/dmenu)
+- Bar: [slstatus](https://github.com/joeyjooste/slstatus)
+- Apps: Flatpak
 
-Ensure you have the following installed on your system
-
-### Git
-
-```
-pacman -S git
-```
-
-### Stow
-
-```
-pacman -S stow
-```
-
-### Zellij
-
-``` 
-pacman -S zellij
-```
-
-### Zsh
-
-```
-pacman -S zsh
-```
-
-## Installation
-
-Step 1 is to add the dotfiles repo to your $HOME directory 
-
-```
-$ git clone git@github.com/FrikkyWasTaken/dotfiles.git
-$ cd dotfiles
-```
-
-Then use GNU Stow to create symlinks
-
-```
-$ stow .
-```
 
 ## Adding your own Dot files to the repo
 
@@ -83,7 +49,7 @@ NOTE: This command overwrites the existing dotfiles on your system, use with cau
 [Setup GNU Stow and your very own dotfiles Repo](https://youtu.be/y6XCebnB9gs?si=k3jpqGTt3HtZgFtv)
 
 
-# Transition to Void
+# Noob install guide (for me)
 I'm moving my dotfiles across to a suckless and linux void setup, below is documentation that I'm finding along the way.
 
 
@@ -102,7 +68,7 @@ sudo xbps-install -Su
 ```
 - Install basic packages
 ```
-sudo xbps-install -S helix xorg xinit git make base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel firefox neofetch
+sudo xbps-install -S helix xorg xinit git make base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel firefox neofetch zellij stow zsh starship yazi xwallpaper
 ```
 - Make directories for suckless
 ```
@@ -174,9 +140,12 @@ Now reload DWM to see it apply, (make sure the font is correctly enabled inside 
 ```
 hx .xinitrc
 ```
-- Now inside of that file add this line
+- Now inside of that file add these lines
 ```
-exec /usr/local/bin/dwm
+slstatus &
+pasystray &
+xwallpaper --zoom ~/Wallpaper/gruvboxLady.png &
+exec dbus-run-session dwm
 ```
 - Install flatpak to manage proprietary applications
 https://flatpak.org/setup/Void%20Linux
@@ -187,7 +156,102 @@ For every installed flatpak application, run this command to allow dmenu to open
 ```
 sudo ln -s /var/lib/flatpak/exports/bin/chat.rocket.RocketChat /usr/bin/rocket-chat
 ```
+#### List of all my flatpaks
+- Signal
+- Discord
+- Cider
+- Bitwarden
+- Obsidian
+
 
 - Theme firefox with your desired theme, I use the theme below
 https://github.com/vinceliuice/WhiteSur-firefox-theme.git
 
+- Change default terminal to zsh
+```
+chsh -s /usr/bin/zsh
+```
+restart your system to enable the new shell
+
+- Now clone this dotfiles repo
+```
+git clone https://github.com/joeyjooste/dotfiles
+```
+```
+stow .
+```
+If you have any existing config files that are conflicting, just go through and remove them and run "stow ." again.
+- Firefox MP4
+I needed the ffmpeg-devel package to enable mp4 in firefox videos.
+
+- Install pulseaudio
+```
+sudo xbps-install -S pulseaudio
+```
+```
+sudo xbps-install -S pasystray
+```
+- Install npm and node
+```
+sudo xbps-install -S nodejs
+```
+- Helix Language Servers
+These are for my config, adjust as needed based on your config.
+```
+cargo install --git https://github.com/estin/simple-completion-language-server.git
+```
+```
+npm i -g typescript-language-server typescript @tailwindcss/language-server prettier vscode-langservers-extracted
+```
+
+- Install default system font
+Download Inter from here:
+https://fonts.google.com/specimen/Inter
+
+ Inside of your downloads folder run the following
+```
+sudo mv Inter.zip /usr/share/fonts/TTF
+```
+Use tab to complete the name of your zip.
+
+- Then cd into the TTF folder
+```
+cd /usr/share/fonts/TTF
+```
+```
+sudo unzip Inter.zip
+```
+```
+sudo hx /etc/fonts/local.conf
+```
+Then add this inside of it:
+```
+<?xml version='1.0'?>
+<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+<fontconfig>
+  <alias>
+    <family>sans-serif</family>
+    <prefer>
+      <family>Inter</family>
+    </prefer>
+  </alias>
+</fontconfig>
+```
+- Creat bootable media for another PC on void.
+```
+sudo xbps-install -S void-release-keys minisign outils
+```
+Then follow the steps here: https://docs.voidlinux.org/installation/index.html#verifying-images
+
+### Tweaks
+- Disable Mouse Acceleration
+https://wiki.archlinux.org/title/Mouse_acceleration
+- Enable Rich Presence in flatpak version of discord
+https://github.com/flathub/com.discordapp.Discord/wiki/Rich-Precense-(discord-rpc)
+- Setup github SSH key and config flags
+  Generate Key, Set key in SSH file, copy pub key to github, Create SSH config file that points to key, change any git url's to use SSH
+
+### Todo
+Auto Startx
+Fix colours on bar
+Add screenshot tool + keybinds
