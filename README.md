@@ -6,10 +6,11 @@ These files are usually configuration files for my applications and system.
 
 ## The Stack
 - Distro: Void
-- WM: [DWM](https://github.com/joeyjooste/dwm)
-- Term: [ST](https://github.com/joeyjooste/st)
-- Launcher: [DMENU](https://github.com/joeyjooste/dmenu)
+- WM: [dwm](https://github.com/joeyjooste/dwm)
+- Term: [st](https://github.com/joeyjooste/st)
+- Launcher: [dmenu](https://github.com/joeyjooste/dmenu)
 - Bar: [slstatus](https://github.com/joeyjooste/slstatus)
+- Screen Lock: [slock](https://github.com/joeyjooste/slock)
 - Apps: Flatpak
 
 
