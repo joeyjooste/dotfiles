@@ -68,7 +68,7 @@ sudo xbps-install -Su
 ```
 - Install basic packages
 ```
-sudo xbps-install -S helix xorg xinit git make base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel firefox neofetch zellij stow zsh starship yazi xwallpaper cargo xsel libXrandr-devel
+sudo xbps-install -S helix xorg xinit git make base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel firefox neofetch zellij stow zsh starship yazi xwallpaper cargo xsel libXrandr-devel imlib2-devel
 ```
 - Make directories for suckless
 ```
