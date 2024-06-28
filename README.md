@@ -1,53 +1,15 @@
 # My dotfiles
 
-This is a repo containing all of my dotfiles (Files in linux that start with a . such as .zshrc).
-
-These files are usually configuration files for my applications and system.
+All the dotfiles and config steps to go from a clean linux void installation to a fully functioning workspace. Using void linux and suckless utilities
 
 ## The Stack
 - Distro: Void
-- WM: [DWM](https://github.com/joeyjooste/dwm)
-- Term: [ST](https://github.com/joeyjooste/st)
-- Launcher: [DMENU](https://github.com/joeyjooste/dmenu)
+- WM: [dwm](https://github.com/joeyjooste/dwm)
+- Term: [st](https://github.com/joeyjooste/st)
+- Launcher: [dmenu](https://github.com/joeyjooste/dmenu)
 - Bar: [slstatus](https://github.com/joeyjooste/slstatus)
+- Screen Lock: [slock](https://github.com/joeyjooste/slock)
 - Apps: Flatpak
-
-
-## Adding your own Dot files to the repo
-
-### Fork the repo on github
-
-Fork the Repo by clicking the fork button on github
-
-Now follow the [Installation](##Installation) but change the git URL to that of your own repo
-
-### Add your own dotfiles
-
-Keep the directory structure the same and move your dotfiles into the ~/dotfiles directory
-
-Now push it to your git repo
-
-In your ~/dotfiles directory run:
-
-```
-$ git add .
-$ git commit -m "Added X dotfiles"
-$ git push origin main
-```
-
-Now add the sym links to your dotfiles (CAREFUL)
-
-```
-stow --override .
-```
-
-NOTE: This command overwrites the existing dotfiles on your system, use with caution.
-
-
-## How to setup your own dotfiles repo
-
-[Setup GNU Stow and your very own dotfiles Repo](https://youtu.be/y6XCebnB9gs?si=k3jpqGTt3HtZgFtv)
-
 
 # Noob install guide (for me)
 I'm moving my dotfiles across to a suckless and linux void setup, below is documentation that I'm finding along the way.
@@ -68,7 +30,7 @@ sudo xbps-install -Su
 ```
 - Install basic packages
 ```
-sudo xbps-install -S helix xorg xinit git make base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel firefox neofetch zellij stow zsh starship yazi xwallpaper cargo xsel libXrandr-devel
+sudo xbps-install -S helix xorg xinit git make base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel firefox neofetch zellij stow zsh starship yazi xwallpaper cargo xsel libXrandr-devel imlib2-devel
 ```
 - Make directories for suckless
 ```
@@ -140,7 +102,6 @@ hx .xinitrc
 - Now inside of that file add these lines
 ```
 slstatus &
-pasystray &
 xwallpaper --zoom ~/Wallpaper/gruvboxLady.png &
 exec dbus-run-session dwm
 ```
@@ -159,7 +120,6 @@ sudo ln -s /var/lib/flatpak/exports/bin/chat.rocket.RocketChat /usr/bin/rocket-c
 - Cider
 - Bitwarden
 - Obsidian
-
 
 - Theme firefox with your desired theme, I use the theme below
 https://github.com/vinceliuice/WhiteSur-firefox-theme.git
@@ -252,3 +212,40 @@ https://github.com/flathub/com.discordapp.Discord/wiki/Rich-Precense-(discord-rp
 Auto Startx
 Add screenshot tool + keybinds
 Add slock and configure it to be cool
+Wireguard-tools and config files
+
+## Adding your own Dot files to the repo
+
+### Fork the repo on github
+
+Fork the Repo by clicking the fork button on github
+
+Now follow the [Installation](##Installation) but change the git URL to that of your own repo
+
+### Add your own dotfiles
+
+Keep the directory structure the same and move your dotfiles into the ~/dotfiles directory
+
+Now push it to your git repo
+
+In your ~/dotfiles directory run:
+
+```
+$ git add .
+$ git commit -m "Added X dotfiles"
+$ git push origin main
+```
+
+Now add the sym links to your dotfiles (CAREFUL)
+
+```
+stow --override .
+```
+
+NOTE: This command overwrites the existing dotfiles on your system, use with caution.
+
+
+## How to setup your own dotfiles repo
+
+[Setup GNU Stow and your very own dotfiles Repo](https://youtu.be/y6XCebnB9gs?si=k3jpqGTt3HtZgFtv)
+
