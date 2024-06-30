@@ -209,10 +209,11 @@ https://github.com/flathub/com.discordapp.Discord/wiki/Rich-Precense-(discord-rp
   Generate Key, Set key in SSH file, copy pub key to github, Create SSH config file that points to key, change any git url's to use SSH
 
 ### Todo
-Auto Startx
-Add screenshot tool + keybinds
-Add slock and configure it to be cool
-Wireguard-tools and config files
+- Auto Startx
+- Add screenshot tool + keybinds
+- Add slock and configure it to be cool
+- Wireguard-tools and config files
+- configure zsh https://www.youtube.com/watch?v=ud7YxC33Z3w
 
 ## Adding your own Dot files to the repo
 
