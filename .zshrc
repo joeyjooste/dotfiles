@@ -1,64 +1,38 @@
-# Path to your oh-my-zsh installation.
-# ZSH=/usr/share/oh-my-zsh/
+### Added by Zinit's installer
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
 
-# Path to powerlevel10k theme
-# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
-# Path to Helix simple-completion-language-server installation
-# export PATH="$PATH:/home/joey/.cargo/bin"
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
 
-# List of plugins used
-# source $ZSH/oh-my-zsh.sh
+### End of Zinit's installer chunk
 
-# In case a command is not found, try to find the package that has it
-#function command_not_found_handler {
-#  local purple='\e[1;35m' bright='\e[0;1m' green='\e[1;32m' reset='\e[0m'
-#    printf 'zsh: command not found: %s\n' "$1"
-#    local entries=( ${(f)"$(/usr/bin/pacman -F --machinereadable -- "/usr/bin/$1")"} )
-#    if (( ${#entries[@]} )) ; then
-#        printf "${bright}$1${reset} may be found in the following packages:\n"
-#       local pkg
-#       for entry in "${entries[@]}" ; do
-#           local fields=( ${(0)entry} )
-#           if [[ "$pkg" != "${fields[2]}" ]] ; then
-#                printf "${purple}%s/${bright}%s ${green}%s${reset}\n" "${fields[1]}" "${fields[2]}" "${fields[3]}"
-#            fi
-#            printf '    /%s\n' "${fields[4]}"
-#            pkg="${fields[2]}"
-#        done
-#    fi
-#    return 127
-#}
+# Add zsh plugins
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+zinit ice depth=1
+zinit light jeffreytse/zsh-vi-mode
 
-# Detect the AUR wrapper
-#if pacman -Qi yay &>/dev/null ; then
-#   aurhelper="yay"
-#elif pacman -Qi paru &>/dev/null ; then
-#   aurhelper="paru"
-#fi
+# Load completions
+autoload -U compinit && compinit
 
-#function in {
-#    local pkg="$1"
-#    if pacman -Si "$pkg" &>/dev/null ; then
-#        sudo pacman -S "$pkg"
-#    else 
-#        "$aurhelper" -S "$pkg"
-#    fi
-#}
-
-# Helpful aliases
-alias  l='eza -lh  --icons=auto' # long list
-alias ls='ls' # short list
-alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
-alias ld='eza -lhD --icons=auto' # long list dirs
-alias un='$aurhelper -Rns' # uninstall package
-alias up='$aurhelper -Syu' # update system/package/aur
-alias pl='$aurhelper -Qs' # list installed package
-alias pa='$aurhelper -Ss' # list availabe package
-alias pc='$aurhelper -Sc' # remove unused cache
-alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
-alias vc='code --disable-gpu' # gui code editor
-
+# Init starship prompt
 eval "$(starship init zsh)"
 
 neofetch
+
