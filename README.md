@@ -30,7 +30,7 @@ sudo xbps-install -Su
 ```
 - Install basic packages
 ```
-sudo xbps-install -S helix xorg xinit git make base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel firefox neofetch zellij stow zsh starship yazi xwallpaper cargo xsel libXrandr-devel imlib2-devel xdg-utils
+sudo xbps-install -S helix xorg xinit git make base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel firefox neofetch zellij stow zsh starship yazi xwallpaper cargo xsel libXrandr-devel imlib2-devel xdg-utils tailscale
 ```
 - Make directories for suckless
 ```
@@ -193,6 +193,10 @@ Then add this inside of it:
     </prefer>
   </alias>
 </fontconfig>
+```
+- Setup tailscaled sym link
+```
+sudo ln -s /etc/sv/tailscaled /var/service/
 ```
 - Creat bootable media for another PC on void.
 ```
