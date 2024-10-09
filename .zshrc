@@ -26,7 +26,6 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit ice depth=1
-zinit light jeffreytse/zsh-vi-mode
 
 # Load completions
 autoload -U compinit && compinit
@@ -34,5 +33,16 @@ autoload -U compinit && compinit
 # Init starship prompt
 eval "$(starship init zsh)"
 
+# Init fuck command
+eval $(thefuck --alias)
+# Set Firefox as default browser
+export BROWSER="/usr/bin/firefox"
+
 neofetch
 
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
